@@ -1,41 +1,33 @@
 package com.allenxiao.gordon.repeattimerl;
 
 import android.app.Activity;
-import android.app.DialogFragment;
 import android.net.Uri;
-import android.os.Bundle;
 import android.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link AddTimerFragment.SetTimeListener} interface
+ * {@link com.allenxiao.gordon.repeattimerl.AddTimerFragment.SetTimerListener} interface
  * to handle interaction events.
  *
  */
 public class AddTimerFragment extends Fragment {
 
-    private SetTimeListener mListener;
+    private SetTimerListener mListener;
 
     public AddTimerFragment() {
         // Required empty public constructor
     }
 
-
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mListener = (SetTimeListener) activity;
+            mListener = (SetTimerListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
-                    + " must implement SetTimeListener");
+                    + " must implement SetTimerListener");
         }
     }
 
@@ -55,9 +47,8 @@ public class AddTimerFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface SetTimeListener {
-        // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+    public interface SetTimerListener {
+        public void onTimerSet(int min, int sec);
     }
 
 }

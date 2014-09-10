@@ -13,7 +13,7 @@ import android.os.Build;
 
 
 
-public class Main extends Activity {
+public class Main extends Activity implements AddTimerFragment.SetTimerListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,4 +48,8 @@ public class Main extends Activity {
     }
 
 
+    @Override
+    public void onTimerSet(int min, int sec) {
+
+    }
 }

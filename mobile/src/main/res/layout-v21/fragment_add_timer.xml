@@ -10,6 +10,6 @@
         android:layout_height="wrap_content"
         android:text="@string/add_timer_btn"
         android:id="@+id/button"
-        android:layout_gravity="center" />
+        android:layout_gravity="center_horizontal|bottom" />
 
 </FrameLayout>

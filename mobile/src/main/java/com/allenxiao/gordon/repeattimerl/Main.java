@@ -3,6 +3,7 @@ package com.allenxiao.gordon.repeattimerl;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,12 +19,22 @@ public class Main extends Activity implements AddTimerFragment.SetTimerListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Set main layout container
         setContentView(R.layout.activity_main);
+
+        //Check if we returned from a previous state
         if (savedInstanceState == null) {
+            //Nothing saved from previous state
+            //Create new fragments
             MainDisplayFragment mainFragment = new MainDisplayFragment();
-            getFragmentManager().beginTransaction()
-                    .add(R.id.container, mainFragment)
-                    .commit();
+            AddTimerFragment addTimerFragment = new AddTimerFragment();
+
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            //Add fragments below to the main layout
+            transaction .add(R.id.container, mainFragment);
+            transaction.add(R.id.container, addTimerFragment);
+
+            transaction.commit();
         }
     }
 

@@ -31,7 +31,7 @@ public class Main extends Activity implements AddTimerFragment.SetTimerListener{
 
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             //Add fragments below to the main layout
-            transaction .add(R.id.container, mainFragment);
+            transaction.add(R.id.container, mainFragment);
             transaction.add(R.id.container, addTimerFragment);
 
             transaction.commit();

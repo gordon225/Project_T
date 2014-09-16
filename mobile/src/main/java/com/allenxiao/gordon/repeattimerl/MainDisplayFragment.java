@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
+ * Displays timers on main activity.
  * Use the {@link MainDisplayFragment#newInstance} factory method to
  * create an instance of this fragment.
  * test

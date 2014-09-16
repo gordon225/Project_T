@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  * A simple {@link Fragment} subclass.
  * Use the {@link MainDisplayFragment#newInstance} factory method to
  * create an instance of this fragment.
- *
+ * test
  */
 public class MainDisplayFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match

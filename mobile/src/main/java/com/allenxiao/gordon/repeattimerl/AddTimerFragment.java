@@ -19,7 +19,7 @@ import android.widget.Toast;
  * Activities that contain this fragment must implement the
  * {@link com.allenxiao.gordon.repeattimerl.AddTimerFragment.SetTimerListener} interface
  * to handle interaction events.
- *
+ * Test comment
  */
 public class AddTimerFragment extends DialogFragment {
 
